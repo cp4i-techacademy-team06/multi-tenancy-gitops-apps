@@ -4,6 +4,9 @@ metadata:
   namespace: tools
   name: es-job-role
 rules:
+  - apiGroups: ["eventstreams.ibm.com"]
+    resources: ["eventstreams"]
+    verbs: ["get", "watch", "list"]
   - apiGroups: [“apps”]
     resources: [“statefulsets”]
     verbs: [“get”, “watch”, “list”]
